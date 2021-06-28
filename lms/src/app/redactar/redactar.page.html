@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Redactar Mensaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="opcionesContacto">
+    <ion-item>
+      <ion-label>Curso</ion-label>
+      <ion-select>
+        <ion-select-option value="2021HermeneuticaI">Hermeneutica I</ion-select-option>
+        <ion-select-option value="2021HermeneuticaII">Hermeneutica II</ion-select-option>
+        <ion-select-option value="2021HermeneuticaIII">Hermeneutica III</ion-select-option>
+        <ion-select-option value="2021HermeneuticaIV">Hermeneutica IV</ion-select-option>
+        <ion-select-option value="2021HermeneuticaV">Hermeneutica V</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contacto</ion-label>
+      <ion-select multiple="true">
+        <ion-select-option class="profesor" value="carlmera@entidad.edu.ec">MERA CARLOS</ion-select-option>
+        <ion-select-option class="estudiante" value="mebanchon@entidad.edu.ec">Banchón Melanie</ion-select-option>
+        <ion-select-option class="estudiante" value="petdelacruz@entidad.edu.ec">De la Cruz Petter</ion-select-option>
+        <ion-select-option class="estudiante" value="wimedina@entidad.edu.ec">Medina William</ion-select-option>
+        <ion-select-option class="estudiante" value="semendoza@entidad.edu.ec">Mendoza Sebastián</ion-select-option>
+        <ion-select-option class="estudiante" value="edsabando@entidad.edu.ec">Sabando Edwars</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </div>
+
+  <ion-textarea rows= "14" cols="30" class="areaMensaje" placeholder="Escriba su mensaje aquí..."></ion-textarea>
+
+  <ion-button shape="round" class="botonEnviar" href="#">Enviar mensaje</ion-button>
+  <ion-button shape="round" class="botonCancelar" (click)="salirRedactar()">Cancelar</ion-button>
+
+
+</ion-content>

@@ -1,0 +1,9 @@
+.segment-tab {
+    display: flex;
+    overflow-x: auto;
+    justify-content: center !important;
+    .segment-item {
+        min-width: 70px !important;
+        width: auto !important;
+    }
+}

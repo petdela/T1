@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Mensajes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mensajes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button shape="round" class="botonRegresar" routerLink="../inicio">Regresar a Inicio</ion-button>
+  
+  <ion-button shape="round" class="botonRedactar" (click)="redactarMensaje()"><ion-icon name="pencil-outline"></ion-icon>Redactar mensaje</ion-button>
+  
+  <ion-list class="listaCorreos">
+      <ion-item button="true" (click)="leerMensaje()">
+        <div class="correos">
+          <h3>Trabajo sobre la clase de ayer</h3>
+          <h6>Pamela Cortez</h6>
+          <h6>22-06-2021</h6>
+        </div>
+      </ion-item>
+
+      <ion-item button="true" (click)="leerMensaje()">
+        <div class="correos">
+          <h3>Grupo de WS del curso</h3>
+          <h6>Luis Fernandez</h6>
+          <h6>19-05-2021</h6>
+        </div>
+      </ion-item>
+
+      <ion-item button="true" (click)="leerMensaje()">
+        <div class="correos">
+          <h3>Cambios en nuestro grupo</h3>
+          <h6>Alex Suarez</h6>
+          <h6>05-04-2021</h6>
+        </div>
+      </ion-item>
+
+      <ion-item button="true" (click)="leerMensaje()">
+        <div class="correos">
+          <h3>Preguntas sobre la lección</h3>
+          <h6>Leslie Guzmán</h6>
+          <h6>10-03-2021</h6>
+        </div>
+      </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,29 @@
+.botonRegresar{
+    margin-top: 40px !important;
+    margin-left: 40px !important;
+}
+
+.contenedorBotones{
+    display: flex;
+    justify-content: center !important;
+    flex-direction: column !important;
+    margin-top: 30px !important;
+}
+
+.iconoOpcion{
+    margin-right: 10px !important;
+    height: 20px;
+    width: 20px;
+}
+
+.botonesCuenta{
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    height: 50px !important;
+    --background: #c9c9c9 !important;
+    color: black !important;
+}
+
+#botonSalir{
+    --background:  #eb5454 !important;
+}

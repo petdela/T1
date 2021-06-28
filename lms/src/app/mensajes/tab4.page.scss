@@ -1,0 +1,22 @@
+.botonRegresar{
+    margin-top: 40px !important;
+    margin-left: 40px !important;
+}
+
+.botonRedactar{
+    padding-top: 30px !important;
+    height: 80px !important;
+    --background:  #58c6d8 !important;
+    display: flex;
+    justify-content: center !important;
+}
+
+.listaCorreos{
+    margin-top: 30px !important;
+}
+
+.correos{
+    display: flex;
+    justify-content: center !important;
+    flex-direction: column !important;
+}

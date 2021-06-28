@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Grupos de Materia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="listaGrupos">
+    <ion-list-header>Grupos de trabajo</ion-list-header>
+      <ion-item class="padingGrupos">
+        <div class="elementosGrupo">
+          <ion-label>Grupo 1</ion-label>
+          <h6 class="textoGrupo"><b>Integrantes:</b> Estudiante 1, Estudiante 2</h6>
+          <h6 class="textoGrupo"><b>Capacidad:</b> 2/3</h6>
+          <ion-button shape="round" class="botonUnirse" (click)="avisoUnion()">Unirse</ion-button>
+        </div>
+      </ion-item>
+      <ion-item class="padingGrupos">
+        <div class="elementosGrupo">
+          <ion-label>Grupo 2</ion-label>
+          <h6 class="textoGrupo"><b>Integrantes:</b> Estudiante 1, Estudiante 2, Estudiante 3</h6>
+          <h6 class="textoGrupo"><b>Capacidad:</b> 3/3</h6>
+          <ion-button shape="round" class="botonUnirse" disabled="true" (click)="avisoUnion()">Unirse</ion-button>
+        </div>
+      </ion-item>
+      <ion-item class="padingGrupos">
+        <div class="elementosGrupo">
+          <ion-label>Grupo 3</ion-label>
+          <h6 class="textoGrupo"><b>Integrantes:</b> Estudiante 1</h6>
+          <h6 class="textoGrupo"><b>Capacidad:</b> 1/3</h6>
+          <ion-button shape="round" class="botonUnirse" (click)="avisoUnion()">Unirse</ion-button>
+        </div>
+      </ion-item>
+      <ion-item class="padingGrupos">
+        <div class="elementosGrupo">
+          <ion-label>Grupo 4</ion-label>
+          <h6 class="textoGrupo"><b>Integrantes:</b> </h6>
+          <h6 class="textoGrupo"><b>Capacidad:</b> 0/3</h6>
+          <ion-button shape="round" class="botonUnirse" (click)="avisoUnion()">Unirse</ion-button>
+        </div>
+      </ion-item>
+  </ion-list>
+</ion-content>

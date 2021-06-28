@@ -1,0 +1,175 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nombre de Materia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1 id="tituloMateria">Hermeneutica</h1>
+  
+  <ion-grid padding > 
+    <ion-row style='text-align: center;'>
+      <ion-col col-sm=12>
+        <ion-button color="primary" size="default">Inicio</ion-button>
+      </ion-col>
+      <ion-col col-sm=12>
+        <ion-button color="medium"  size="default">Foro</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="ion-padding">
+      <ion-icon class="icon-right" name="megaphone-outline"></ion-icon>
+      <span class="anuncio">Anuncio</span>
+      <button (click)="modalCrearAnuncio()" class="btn_nothing">
+        <ion-icon class= "icon-left"name="add-circle-outline"></ion-icon>
+      </button>  
+  </div>
+
+  <div class="anunciosContenido">
+    <ul class="listaAnuncios">
+      <li *ngFor="let anuncio of anuncios">
+        <ion-grid padding > 
+          
+          <ion-row >
+            <ion-col class="anuncioItem" col-sm=12 col-md=6>
+              <span class="tituloAnuncio">{{anuncio.titulo}}</span>
+              <p >{{anuncio.descripcion}}</p>
+            </ion-col>
+            <ion-col style='text-align: center;' col-sm=12 col-md=5>
+              <ion-button color="success" size="samll" (click)="modalModificarAnuncio()">Modificar</ion-button>
+              <ion-button color="danger">Ocultar</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </li>
+    </ul>
+  </div>
+
+  <div class="botonGrupos ion-padding">
+    <a routerLink="../agregar-grupo">
+      <ion-button style="width: 200px;" color="medium">Crea Grupos de Trabajo</ion-button>
+    </a>
+  </div>
+
+  <div class="ion-padding">
+    <ion-icon class= "icon-right" name="reader-outline"></ion-icon>
+    
+    <span class="anuncio">Trabajos</span>
+    <button routerLink="../new-trabajo" class="btn_nothing">
+      <ion-icon class= "icon-left"name="add-circle-outline"></ion-icon>
+    </button>  
+  </div>
+
+  <div class="anunciosContenido">
+    <ul class="listaAnuncios" id ="menu">
+
+      <!--deberes-->
+      <li >
+        <input type="checkbox" name="list" id="nivel1-1">
+          <ion-grid padding > 
+              <ion-row >
+                <ion-col class="anuncioItem" col-sm=12 col-md=5>
+                  <label class="container_item"for="nivel1-1">
+                  <span class="tituloAnuncio">Deberes</span>
+                </label>
+                </ion-col>
+                <ion-col style='text-align: center;' col-sm=12 col-md=5>
+                  <ion-button color="success" size="samll" (click)="abrirModalModificarCategoria()">Modificar</ion-button>
+                  <ion-button color="secondary">Añadir</ion-button>
+                  <ion-button color="danger">Ocultar</ion-button>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+            
+       
+          <ul class="interior">
+
+              <li *ngFor="let item of deberes">
+                <ion-grid padding > 
+                  <ion-row >
+                    <ion-col class="anuncioItem" col-sm=12 col-md=5>
+                      <span class="tituloAnuncio">{{item.titulo}}</span>
+                      <p>{{item.descripcion}}</p>
+                    </ion-col>
+                    <ion-col style='text-align: center;' col-sm=12 col-md=5>
+                      <ion-button color="success" size="samll" (click)="modalModificarTrabajo()">Modificar</ion-button>
+                      <ion-button color="warning" routerLink="../tarea">Calificar</ion-button>
+                      <ion-button color="danger">Ocultar</ion-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </li>
+              
+                
+          </ul>
+      </li>
+      
+      <!--talleres-->
+      <li>
+        <input type="checkbox" name="list" id="nivel1-2">
+          <ion-grid padding > 
+              <ion-row >
+                <ion-col class="anuncioItem" col-sm=12 col-md=5>
+                  <label class="container_item"for="nivel1-2">
+                    <span class="tituloAnuncio">Talleres</span>
+                  </label>
+                </ion-col>
+                <ion-col style='text-align: center;' col-sm=12 col-md=5>
+                  <ion-button color="success" size="samll" (click)="abrirModalModificarCategoria()">Modificar</ion-button>
+                  <ion-button color="secondary">Añadir</ion-button>
+                  <ion-button color="danger">Ocultar</ion-button>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+            
+       
+          <ul class="interior">
+              <li *ngFor="let item of talleres">
+                <ion-grid padding > 
+                  <ion-row >
+                    <ion-col class="anuncioItem" col-sm=12 col-md=5>
+                      <span class="tituloAnuncio">{{item.titulo}}</span>
+                      <p>{{item.descripcion}}</p>
+                    </ion-col>
+                    <ion-col style='text-align: center;' col-sm=12 col-md=5>
+                      <ion-button color="success" size="samll" (click)="modalModificarTrabajo()">Modificar</ion-button>
+                      <ion-button color="warning" routerLink="../tarea">Calificar</ion-button>
+                      <ion-button color="danger">Ocultar</ion-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!--material de clases-->
+  <div class="ion-padding">
+    <ion-icon  class= "icon-right"name="book-outline"></ion-icon>
+    <span class="anuncio">Material de clase</span>
+    <button class="btn_nothing">
+      <ion-icon (click)='modalCrearMaterial()' class= "icon-left"name="add-circle-outline"></ion-icon>
+    </button>  
+  </div>
+
+  <div class="anunciosContenido">
+    <ul class="listaAnuncios">
+      <li *ngFor="let mat of materiales">
+        <ion-grid padding > 
+          <ion-row>
+            <ion-col col-sm=12 col-md=6>
+              <span >{{mat.titulo}}</span>
+            </ion-col>
+            <ion-col style='text-align: center;' col-sm=12 col-md=5>
+              <ion-button color="success" size="samll" (click)="modalModificarMaterial()">Modificar</ion-button>
+              <ion-button color="danger">Ocultar</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </li>
+    </ul>
+  </div>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reporte de Notas por Materia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label>Seleccione una materia: </ion-label>
+      <ion-select [(ngModel)]="selectedSubject" (ionChange)="selectSubject($event)"
+      interface="popover">
+        <ion-select-option *ngFor="let subject of subjects" [value]="subject">
+          {{subject}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </div>
+
+  <div *ngIf="selectedSubject" >
+    
+    <mat-table  #table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}}</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element[column.id]}}</mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row style="text-align: left;" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  
+  </div>
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button ion-button color='success' (click)="exportAsXLSX()">Descargar reporte</ion-button>
+        <ion-button ion-button (click)="reset()">Limpiar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

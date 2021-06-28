@@ -1,0 +1,28 @@
+.icon-right{
+	margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.descripcionRetro {
+	border: 1px solid rgba(0,0,0,0.2);
+	overflow-y: auto;
+	justify-content: left;
+	height: 300px;
+	//margin-bottom: 5%;
+    margin-left:2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+.botonListo{
+    padding-top: 30px !important;
+    height: 80px !important;
+    display: flex;
+    justify-content: center !important;
+}
+
+#calificacionDada{
+    font-size: 14px !important;
+    color: #004d4d !important;
+}

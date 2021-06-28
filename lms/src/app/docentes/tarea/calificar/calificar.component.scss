@@ -1,0 +1,38 @@
+.list_header_table{
+    display: flex;
+    background-color: white;
+    color: black;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.over{
+    display: inline-flex;
+}
+.td_calificacion{
+    display: flex;
+    height: 100%;
+}
+.input_calificacion{
+    width: 10px;
+}
+.icon_book{
+    margin-right: 15px;
+}
+.container_search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .icon_search{
+        margin-left: 50px;
+    }
+}
+table {
+    width: 100%;
+  }
+.icono{
+    font-size: 1.5rem;
+}

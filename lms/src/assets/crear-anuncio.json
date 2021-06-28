@@ -1,0 +1,74 @@
+[
+    {
+      "_id": "60c1b64f56feeeff0b80de09",
+      "index": 0,
+      "nombres": "Melanie Banchon",
+      "materia": "Lenguaje extranjero",
+      "tarea1": 3,
+      "tarea2": 4,
+      "leccion1": 3,
+      "leccion2": 1,
+      "proyecto": 3,
+      "final": 4
+    },
+    {
+      "_id": "60c1b64f22626ae44fda031e",
+      "index": 1,
+      "nombres": "William Medina",
+      "materia": "Religion",
+      "tarea1": 6,
+      "tarea2": 7,
+      "leccion1": 0,
+      "leccion2": 4,
+      "proyecto": 9,
+      "final": 4
+    },
+    {
+      "_id": "60c1b64f32d86e0f1f1e9647",
+      "index": 2,
+      "nombres": "Sebastian Mendoza",
+      "materia": "Economia",
+      "tarea1": 9,
+      "tarea2": 0,
+      "leccion1": 2,
+      "leccion2": 9,
+      "proyecto": 1,
+      "final": 2
+    },
+    {
+      "_id": "60c1b64f22c790fde95ac28e",
+      "index": 3,
+      "nombres": "Peter de la Cruz",
+      "materia": "Teologia 1",
+      "tarea1": 6,
+      "tarea2": 0,
+      "leccion1": 5,
+      "leccion2": 3,
+      "proyecto": 3,
+      "final": 4
+    },
+    {
+      "_id": "60c1b64f4b8aaf9c4209957f",
+      "index": 4,
+      "nombres": "Edwars Sabando",
+      "materia": "Teologia 2",
+      "tarea1": 10,
+      "tarea2": 0,
+      "leccion1": 7,
+      "leccion2": 9,
+      "proyecto": 0,
+      "final": 3
+    },
+    {
+      "_id": "60c1b64f22626ae44fda031h",
+      "index": 5,
+      "nombres": "Ariel Banchon",
+      "materia": "Religion",
+      "tarea1": 6,
+      "tarea2": 7.6,
+      "leccion1": 0,
+      "leccion2": 4.2,
+      "proyecto": 9,
+      "final": 8.5
+    }
+  ]

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Título del Foro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="elementosForo">
+    <div class="datosImportantes">
+      <img height="80px" width="80px" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png">
+      <h5><b>Autor:</b>[Profesor]</h5>
+      <h6><b>Fecha:</b>[Fecha]</h6>
+    </div>
+    <ion-textarea rows= "5" cols="20" class="areaRaiz" readonly="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Quisque ut tincidunt libero. Vestibulum et interdum arcu. Sed ultricies ligula vel lacus imperdiet, ac commodo sapien vehicula. 
+      Nam blandit diam felis, sit amet iaculis lorem varius eu. Proin tempus mattis ultricies. Nullam fermentum libero molestie,
+       vehicula mauris sit amet, mollis ante. Maecenas justo neque, aliquet vitae dui nec, pellentesque volutpat lorem. Sed ut nisi mattis quam dictum commodo nec ut odio. 
+       Integer pharetra aliquam diam, fermentum tincidunt ex. Ut semper dapibus sem. </ion-textarea>
+  </div>
+
+  <div class="respuestasForo">
+    <!-- AQUI VAN LAS RESPUESTAS-->
+  </div>
+
+  <div class="escribirRespuesta">
+    <div class="elementosEscritura">
+      <h5><b>Escribe aquí tu respuesta:</b></h5>
+      <ion-textarea rows= "5" cols="20" class="areaRespuesta" autoGrow="true"></ion-textarea>
+    </div>
+    <ion-button shape="round" id="botonResponder">Responder</ion-button>
+  </div>
+
+
+</ion-content>

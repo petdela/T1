@@ -1,0 +1,86 @@
+<ion-item>
+            
+  <ion-icon class="icon_book" name="book-outline"></ion-icon>
+  <ion-label>
+    <p>Tarea 1 Investigacion de mercadeo</p>
+    <p> Vence hoy a las 23:59</p>
+  </ion-label>
+  
+</ion-item>
+<mat-card class="header_table">
+  <ul class="list_header_table">
+    <li>
+      <p>Por entregar {{tareasPorEntregar}}</p>
+    </li>
+    <li>
+      <p>Entregado {{tareasEntregadas}}</p>
+      
+    </li>
+    <li class="container_search">
+      
+        
+        <ion-input input (keyup)="applyFilter($event)" matInput placeholder="Buscar Estudiantes"> </ion-input>
+        
+        <button><ion-icon name="search-outline"></ion-icon></button>
+      
+
+
+      
+      <ion-icon class="icon_search"name="download-outline"></ion-icon>
+    </li>
+    
+  </ul>
+</mat-card>
+
+<table mat-table #table [dataSource]="dataSource">
+  
+  <!-- Estudiantes Colummn -->
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef> Estudiantes </th>
+    <td (click)="onSelect(element.id)" mat-cell *matCellDef="let element"> {{element.nombre}} - {{element.id}} </td>
+  </ng-container>
+  <!-- Estado -->
+  <ng-container matColumnDef="estado">
+    <th mat-header-cell *matHeaderCellDef> Estado </th>
+    <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+  </ng-container>
+  <!-- Estado Calificación -->
+  <ng-container matColumnDef="estado_calificacion">
+    <th mat-header-cell *matHeaderCellDef> Estado Calificacion</th>
+    <td mat-cell *matCellDef="let element"> 
+      <div *ngIf="element.estado_calificacion; else elseBlock">
+        <ion-icon class="icono"name="checkmark-outline"></ion-icon>
+        
+      </div>
+      <ng-template #elseBlock>
+        <ion-icon class="icono"name="close-outline"></ion-icon>
+      </ng-template>
+      
+      
+      
+    </td>
+  </ng-container>
+
+  <!-- Comentarios -->
+  <ng-container matColumnDef="comentario">
+    <th mat-header-cell *matHeaderCellDef> Comentario </th>
+    <td mat-cell *matCellDef="let element"> {{element.comentario}} </td>
+  </ng-container>
+
+  <!-- Calificacion -->
+  <ng-container matColumnDef="calificacion">
+    <th mat-header-cell *matHeaderCellDef> Calificacion </th>
+    <td mat-cell *matCellDef="let element" > 
+      <div class="td_calificacion">
+        <ion-input class="input_calificacion" value="{{element.calificacion}}" type="number"></ion-input>
+        
+        <p >
+          /100
+        </p>
+
+      </div>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

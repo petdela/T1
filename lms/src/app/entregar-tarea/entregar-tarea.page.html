@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Entregar Tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-icon class= "icon-right" name="reader-outline"></ion-icon>
+    <span class="tituloTarea">Tarea pendiente</span> 
+  </div>
+
+  <div class="descripcionTarea">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed risus mattis, varius mi eget, commodo tellus. Pellentesque id dolor et risus lobortis lacinia non rutrum odio. Phasellus hendrerit semper ligula, eget congue tortor vehicula id. Ut dictum pulvinar libero et viverra. Nulla lacinia, odio vitae interdum tempus, nulla nulla mattis erat, a tempor orci mauris ac massa. Aenean erat arcu, vehicula vitae eleifend non, sollicitudin non urna. Vivamus viverra diam id ultricies imperdiet. Etiam ut consequat turpis. Donec ac ultricies neque. Nullam sollicitudin neque sed odio dignissim, quis facilisis mi venenatis. Quisque ex lorem, ultricies et diam id, feugiat tincidunt velit. Cras eget ante elit. Nullam sed euismod nisl, in faucibus elit. </p>
+  </div>
+
+  <div class="ion-padding">
+    <ion-icon class= "icon-right" name="paper-plane-outline"></ion-icon>
+    <span class="envioArchivo">Enviar Archivo</span> 
+  </div>
+  <div class="enviarArchivo">
+    <input type="file" (change)="loadFileFromDevice($event)" id="file-input" multiple="true">
+  </div>
+
+  <ion-button shape="round" class="botonEntregar" routerLink="../../../inicio">Entregar tarea</ion-button>
+
+</ion-content>

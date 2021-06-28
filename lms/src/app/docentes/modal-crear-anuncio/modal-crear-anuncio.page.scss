@@ -1,0 +1,15 @@
+.btn_nothing {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    .icon-left{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.container_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1em;
+}

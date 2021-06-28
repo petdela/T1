@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar estudiante a grupo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" >
+  
+  <div class='ion-padding'>
+    <h2 id="titulo"> LENGUA EXTRANJERA</h2>
+  </div>
+
+  <ion-grid padding > 
+    <ion-row style='text-align: center;'>
+      <ion-col col-sm=12>
+        <ion-button><ion-icon name="people-outline"></ion-icon>Conjunto de Grupos</ion-button>
+      </ion-col>
+      <ion-col col-sm=12>
+        <ion-button><ion-icon name="add-circle-outline"></ion-icon>Grupos</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <div class='ion-padding'>
+    <ion-grid>
+      <ion-row>
+        <!--primera columna-->
+        <ion-col col-md="3" col-sm=12>
+          <h2>Estudiantes no asignados</h2>
+          <ion-grid>
+            <ion-row *ngFor="let student of people">
+              <ion-col col-sm=12>
+                <p (click)="onClick($event)" > 
+                  <ion-icon class="icon-right" name="person-add-outline"></ion-icon>{{student}}</p>
+              </ion-col>
+           
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+
+        <!--segunda columna-->
+        <ion-col  col-md="9" col-sm=12>
+          <ion-item>
+            <ion-label>Seleccione un grupo: </ion-label>
+            <ion-select [(ngModel)]="selectedGroup" (ionChange)="selectGroup($event)"
+            interface="popover"> 
+              <ion-select-option *ngFor="let group of groups" [value]="group">
+                {{group}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+    
+          <!--tabla interna-->
+          <ion-grid>
+            <ion-row  *ngFor="let item of array; let i = index;">
+              <ion-col size="6">
+                {{item.group}}
+              </ion-col>
+              <ion-col size="6">
+                {{item.membersNumber}}
+              </ion-col>
+              <!--cartas-->
+              <div class="box1" >
+                <mat-card class="box2">{{students}}<ion-icon class="icon-left" name="ellipsis-vertical-outline"></ion-icon></mat-card>
+              </div>
+               <!--cartas-->
+            </ion-row> 
+            
+          </ion-grid>
+          
+         
+          <!--tabla interna-->
+        </ion-col>
+     
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+

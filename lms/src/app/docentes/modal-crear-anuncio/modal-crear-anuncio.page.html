@@ -1,0 +1,73 @@
+<ion-header>
+  <div class="container_item">
+    <ion-title >{{titulo}}</ion-title>
+    <button (click)="cerrarModal()"><ion-icon name="close-outline"></ion-icon></button>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+ 
+  
+  <div *ngIf="actividad=='modificar'" class="ion-padding">
+    <ion-label>Asunto</ion-label>
+    <ion-input type="text" placeholder="Ingresar asunto" clearInput="true" clearInput="true" (ionChange)="capturarTitulo( $event )"></ion-input>
+
+    <ion-label>Importancia</ion-label>
+    <ion-input type="text"placeholder="Ingresar importancia" clearInput="true" clearInput="true" (ionChange)="capturarTitulo( $event )"></ion-input>
+
+    <ion-grid padding > 
+      <ion-row style='text-align: center;'>
+        <ion-col col-sm=12>
+          <ion-button color="success" (click)="cerrarCrearAnuncio()">Guardar</ion-button>
+        </ion-col>
+        <ion-col col-sm=12>
+          <ion-button color="danger">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="actividad=='crear'" class="ion-padding">
+    <ion-label>Titulo</ion-label>
+    <ion-input type="text" placeholder="Ingresar titulo" clearInput="true" (ionChange)="capturarTitulo( $event )"></ion-input>
+
+    <ion-label>Descripcion</ion-label>
+    <ion-input type="text" placeholder="Ingresar descripcion" clearInput="true" (ionChange)="capturarDescrip( $event )"></ion-input>
+
+    <ion-grid padding > 
+      <ion-row style='text-align: center;'>
+        <ion-col col-sm=12>
+          <ion-button color="success" (click)="cerrarCrearAnuncio()">Guardar</ion-button>
+        </ion-col>
+        <ion-col col-sm=12>
+          <ion-button color="danger">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="actividad=='crearMaterial'" class="ion-padding">
+    <ion-label>Titulo</ion-label>
+    <ion-input type="text" placeholder="Ingresar titulo" clearInput="true" (ionChange)="capturarTitulo( $event )"></ion-input>
+
+    <ion-label>Descripcion</ion-label>
+    <ion-input type="text" placeholder="Ingresar descripcion" clearInput="true" (ionChange)="capturarDescrip( $event )"></ion-input>
+
+    
+      <ion-label>Seleccione un archivo:</ion-label>
+      <ion-input type='file'></ion-input>  
+    
+
+    <ion-grid padding > 
+      <ion-row style='text-align: center;'>
+        <ion-col col-sm=12>
+          <ion-button color="success" (click)="cerrarCrearAnuncio()">Guardar</ion-button>
+        </ion-col>
+        <ion-col col-sm=12>
+          <ion-button color="danger">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

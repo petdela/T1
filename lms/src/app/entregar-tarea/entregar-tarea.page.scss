@@ -1,0 +1,38 @@
+.icon-right{
+	margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.tituloTarea, .envioArchivo{
+    font-size: 20px;
+}
+
+.descripcionTarea, .enviarArchivo {
+	border: 1px solid rgba(0,0,0,0.2);
+	overflow-y: auto;
+    justify-content: left;
+    text-align: justify;
+	height: 300px;
+	//margin-bottom: 5%;
+    margin-left:2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+.enviarArchivo{
+    height: 100px;
+}
+
+.botonEntregar{
+    padding-top: 30px !important;
+    height: 80px !important;
+    --background:  #51c86e !important;
+    display: flex;
+    justify-content: center !important;
+}
+
+#file-input{
+    margin-top: 20px;
+    margin-left: 20px;
+}

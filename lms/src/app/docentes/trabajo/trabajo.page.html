@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nombre Materia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loaded">
+  <ion-card>
+    <ion-card-header *ngIf="trabajo.Titulo!=undefined">
+      <ion-card-title>
+        {{trabajo.Titulo}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          Instrucciones
+        </ion-label>
+   
+      </ion-item>
+      <ion-text *ngIf="trabajo.Instrucciones">
+
+        <p>
+          {{trabajo.Instrucciones}}
+        </p>
+     
+
+      </ion-text>
+      <ion-item>
+        Archivos:
+      </ion-item>
+      <ion-item *ngIf="trabajo.Puntos">
+        <ion-label>Puntos: {{trabajo.Puntos}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="trabajo.FechaEntrega">
+        <ion-label>Fecha Entrega: {{trabajo.FechaEntrega}}</ion-label>
+      </ion-item>
+
+      <ion-item *ngIf="trabajo.FechaCierre">
+        <ion-label>Fecha Cierre: {{trabajo.FechaCierre}} </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label> Entregados</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
